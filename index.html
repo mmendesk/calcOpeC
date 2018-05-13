@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="caixaMestre">
+        <div class="caixaEsquerda"><img src="duo.png" alt=""></div>
+        <div class="caixaCheckBox">
+            <input type="radio" name="entrada" id="inDoisConj"> Dois Conjuntos<br>
+            <input type="radio" name="entrada" id="inTresConj"> Três Conjuntos
+        </div>
+
+        <div class="caixaInput">
+
+            <p>Universo:
+                <input type="text" name="" id="inUniverso" size="4">
+            </p>
+            <p>A:
+                <input type="text" name="" id="inA" size="4">
+            </p>
+            <p>B:
+                <input type="text" name="" id="inB" size="4">
+            </p>
+            <p>C:
+                <input type="text" name="" id="inC" size="4">
+            </p>
+            <p>A ∩ B:
+                <input type="text" name="" id="inAmB" size="4">
+            </p>
+            <p>A ∩ C:
+                <input type="text" name="" id="inAmC" size="4">
+            </p>
+            <p>B ∩ C:
+                <input type="text" name="" id="inBmC" size="4">
+            </p>
+            <p>A ∩ B ∩ C:
+                <input type="text" name="" id="inAmBmC" size="4">
+            </p>
+            <input type="button" value="Calcular" id="btVer">
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
