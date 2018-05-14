@@ -1,6 +1,6 @@
 function calculadora() {
     if (document.getElementById("inTresConj").checked) {
-        alert("TRES");
+        alert("CAIU NA FUNÇÃO DE TRÊS CONJUNTOS");
         var Res = 0;
         var U = document.getElementById("inUniverso").value;
         var A = document.getElementById("inA").value;
@@ -12,15 +12,28 @@ function calculadora() {
         var AmBmC = document.getElementById("inAmBmC").value;
 
     } else if (document.getElementById("inDoisConj").checked) {
-        alert("DOIS");
+        alert("CAIU NA FUNÇÃO DE DOIS CONJUNTOS");
         var Res = 0;
         var U = document.getElementById("inUniverso").value;
         var A = document.getElementById("inA").value;
         var B = document.getElementById("inB").value;
         var AmB = document.getElementById("inAmB").value;
 
+        if (U == "") {
+            alert("Por favor preencha corretamente o campo Universo, caso você queira descobrir o valor de universo preencha a caixa com um 'x'");
+            document.getElementById("inUniverso").focus();
+        } else if(A == "") {
+            alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inA").focus();
+        } else if(B == "") {
+            alert("Por favor preencha corretamente o campo B, caso você queira descobrir o valor de B preencha a caixa com um 'x'");
+            document.getElementById("inB").focus();
+        } else if(AmB == "") {
+            alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inAmB").focus();
+        }
 
-        if (U == "x") {
+        if (U == "x" || U == "X") {
             a = Number(A);
             b = Number(B);
             amb = Number(AmB);
@@ -28,7 +41,7 @@ function calculadora() {
             var current = document.getElementById("inUniverso");
             current.value = Res
         }
-        else if (A == "x") {
+        else if (A == "x" || A == "X") {
             u = Number(U);
             b = Number(B);
             amb = Number(AmB);
@@ -36,7 +49,15 @@ function calculadora() {
             var current = document.getElementById("inA");
             current.value = Res
         }
-        else if (AmB == "x") {
+        else if (B == "x" || B == "X") {
+            u = Number(U);
+            a = Number(A);
+            amb = Number(AmB);
+            Res = u - (a + amb);
+            var current = document.getElementById("inB");
+            current.value = Res
+        }
+        else if (AmB == "x" || AmB == "X") {
             u = Number(U);
             a = Number(A);
             b = Number(B);
