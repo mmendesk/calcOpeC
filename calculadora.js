@@ -67,20 +67,23 @@ function doalertA(checkboxElem) {
         op4.style.display = 'none';
         op5.style.display = 'none';
         op6.style.display = 'none';
+        img_d.style.display = 'block';
+        img_t.style.display = 'none';
     } else {
-      alert ("bye");
+        alert("bye");
     }
-  }
-  function doalertB(checkboxElem) {
+}
+function doalertB(checkboxElem) {
     if (checkboxElem.checked) {
-
-      op3.style.display = 'block';
-      op4.style.display = 'block';
-      op5.style.display = 'block';
-      op6.style.display = 'block';
+        img_d.style.display = 'none';
+        img_t.style.display = 'block';
+        op3.style.display = 'block';
+        op4.style.display = 'block';
+        op5.style.display = 'block';
+        op6.style.display = 'block';
 
 
     } else {
-      alert ("bye");
+        alert("bye");
     }
-  }
+}
