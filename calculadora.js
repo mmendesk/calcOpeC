@@ -19,13 +19,13 @@ function calculadora() {
         var B = document.getElementById("inB").value;
         var AmB = document.getElementById("inAmB").value;
 
-        if (U == "") {
+        if (U == "" || U <= 0) {
             alert("Por favor preencha corretamente o campo Universo, caso você queira descobrir o valor de universo preencha a caixa com um 'x'");
             document.getElementById("inUniverso").focus();
-        } else if(A == "") {
+        } else if(A == "" || A <= 0) {
             alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
             document.getElementById("inA").focus();
-        } else if(B == "") {
+        } else if(B == "" || B <= 0) {
             alert("Por favor preencha corretamente o campo B, caso você queira descobrir o valor de B preencha a caixa com um 'x'");
             document.getElementById("inB").focus();
         } else if(AmB == "") {
@@ -93,8 +93,6 @@ function doalertB(checkboxElem) {
         op4.style.display = 'block';
         op5.style.display = 'block';
         op6.style.display = 'block';
-
-
     } else {
         alert("bye");
     }
