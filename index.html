@@ -11,10 +11,15 @@
 
 <body>
     <div class="caixaMestre">
-        <div class="caixaEsquerda"><img src="duo.png" alt=""></div>
+        <div class="caixaEsquerda">
+            <img src="duo.png" alt="">
+        </div>
         <div class="caixaCheckBox">
-            <input type="radio" name="entrada" id="inDoisConj"> Dois Conjuntos<br>
-            <input type="radio" name="entrada" id="inTresConj"> Três Conjuntos
+
+
+            <input type="radio" name="entrada" id="inDoisConj" onchange="doalertA(this)"> Dois Conjuntos
+            <br>
+            <input type="radio" name="entrada" id="inTresConj" onchange="doalertB(this)"> Três Conjuntos
         </div>
 
         <div class="caixaInput">
@@ -28,19 +33,19 @@
             <p>B:
                 <input type="text" name="" id="inB" size="4">
             </p>
-            <p>C:
+            <p id="op3" style="display: none;">C:
                 <input type="text" name="" id="inC" size="4">
             </p>
             <p>A ∩ B:
                 <input type="text" name="" id="inAmB" size="4">
             </p>
-            <p>A ∩ C:
+            <p id="op4" style="display: none;">A ∩ C:
                 <input type="text" name="" id="inAmC" size="4">
             </p>
-            <p>B ∩ C:
+            <p id="op5" style="display: none;">B ∩ C:
                 <input type="text" name="" id="inBmC" size="4">
             </p>
-            <p>A ∩ B ∩ C:
+            <p id="op6" style="display: none;">A ∩ B ∩ C:
                 <input type="text" name="" id="inAmBmC" size="4">
             </p>
             <input type="button" value="Calcular" id="btVer">
