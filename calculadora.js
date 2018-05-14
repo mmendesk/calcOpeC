@@ -1,6 +1,5 @@
 function calculadora() {
     if (document.getElementById("inTresConj").checked) {
-        alert("CAIU NA FUNÇÃO DE TRÊS CONJUNTOS");
         var Res = 0;
         var U = document.getElementById("inUniverso").value;
         var A = document.getElementById("inA").value;
@@ -11,8 +10,133 @@ function calculadora() {
         var BmC = document.getElementById("inBmC").value;
         var AmBmC = document.getElementById("inAmBmC").value;
 
+        if (U == "" || U <= 0) {
+            alert("Por favor preencha corretamente o campo Universo, caso você queira descobrir o valor de universo preencha a caixa com um 'x'");
+            document.getElementById("inUniverso").focus();
+        } else if (A == "" || A <= 0) {
+            alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inA").focus();
+        } else if (B == "" || B <= 0) {
+            alert("Por favor preencha corretamente o campo B, caso você queira descobrir o valor de B preencha a caixa com um 'x'");
+            document.getElementById("inB").focus();
+        } else if (AmB == "" || AmB < 0) {
+            alert("Por favor preencha corretamente o campo A ∩ B, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inAmB").focus();
+        } else if (AmC == "" || AmC < 0) {
+            alert("Por favor preencha corretamente o campo A ∩ C, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inAmC").focus();
+        } else if (BmC == "" || BmC < 0) {
+            alert("Por favor preencha corretamente o campo B ∩ C, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inBmC").focus();
+        } else if (AmBmC == "" || AmBmC < 0) {
+            alert("Por favor preencha corretamente o campo A ∩ B ∩ C, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
+            document.getElementById("inAmBmC").focus();
+        }
+
+        if (A == "x" || A == "X") {
+            u = Number(U);
+            b = Number(B);
+            c = Number(C);
+            amb = Number(AmB);
+            amc = Number(AmC);
+            bmc = Number(BmC);
+            todos = Number(AmBmC);
+
+            Res = - (todos) + (b + c) - (amb + amc + bmc);
+            var current = document.getElementById("inA");
+            current.value = Res;
+        }
+        else if (B == "x" || B == "X") {
+            u = Number(U);
+            a = Number(A);
+            c = Number(C);
+            amb = Number(AmB);
+            amc = Number(AmC);
+            bmc = Number(BmC);
+            todos = Number(AmBmC);
+
+            Res = - (todos) + (a + c) - (amb + amc + bmc);
+            var current = document.getElementById("inB");
+            current.value = Res;
+        }
+        else if (C == "x" || C == "X") {
+            u = Number(U);
+            a = Number(A);
+            b = Number(B);
+            amb = Number(AmB);
+            amc = Number(AmC);
+            bmc = Number(BmC);
+            todos = Number(AmBmC);
+
+            Res = - (todos) + (a + b) - (amb + amc + bmc);
+            var current = document.getElementById("inC");
+            current.value = Res;
+        }
+        else if (AmB == "x" || AmB == "X") {
+            u = Number(U);
+            a = Number(A);
+            b = Number(B);
+            c = Number(C);
+            amc = Number(AmC);
+            bmc = Number(BmC);
+            todos = Number(AmBmC);
+
+            Res = u - ((todos) + (a + b + c) + (amc + bmc));
+            var current = document.getElementById("inAmB");
+            current.value = Res;
+
+        } else if (AmC == "x" || AmC == "X") {
+            u = Number(U);
+            a = Number(A);
+            b = Number(B);
+            c = Number(C);
+            amb = Number(AmB);
+            bmc = Number(BmC);
+            todos = Number(AmBmC);
+
+            Res = u - ((todos) + (a + b + c) + (amb + bmc));
+            var current = document.getElementById("inAmC");
+            current.value = Res;
+        } else if (BmC == "x" || BmC == "X") {
+            u = Number(U);
+            a = Number(A);
+            b = Number(B);
+            c = Number(C);
+            amb = Number(AmB);
+            amc = Number(AmC);
+            todos = Number(AmBmC);
+
+            Res = u - ((todos) + (a + b + c) + (amb + amc));
+            var current = document.getElementById("inBmC");
+            current.value = Res;
+        } else if (AmBmC == "x" || AmBmC == "X") {
+            u = Number(U);
+            a = Number(A);
+            b = Number(B);
+            c = Number(C);
+            amb = Number(AmB);
+            bmc = Number(BmC);
+            amc = Number(AmC);
+            Res = u -( a + b + c + amb + bmc + amc);
+
+            var current = document.getElementById("inAmBmC");
+            current.value = Res;
+        }
+        else if (U == "x" || U == "X") {
+
+            a = Number(A);
+            b = Number(B);
+            c = Number(C);
+            amb = Number(AmB);
+            bmc = Number(BmC);
+            amc = Number(AmC);
+            todos = Number(AmBmC);
+            Res = a + b + c + amb + bmc + amc + todos;
+            var current = document.getElementById("inUniverso");
+            current.value = Res;
+        }
+
     } else if (document.getElementById("inDoisConj").checked) {
-        alert("CAIU NA FUNÇÃO DE DOIS CONJUNTOS");
         var Res = 0;
         var U = document.getElementById("inUniverso").value;
         var A = document.getElementById("inA").value;
@@ -22,13 +146,13 @@ function calculadora() {
         if (U == "" || U <= 0) {
             alert("Por favor preencha corretamente o campo Universo, caso você queira descobrir o valor de universo preencha a caixa com um 'x'");
             document.getElementById("inUniverso").focus();
-        } else if(A == "" || A <= 0) {
+        } else if (A == "" || A <= 0) {
             alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
             document.getElementById("inA").focus();
-        } else if(B == "" || B <= 0) {
+        } else if (B == "" || B <= 0) {
             alert("Por favor preencha corretamente o campo B, caso você queira descobrir o valor de B preencha a caixa com um 'x'");
             document.getElementById("inB").focus();
-        } else if(AmB == "") {
+        } else if (AmB == "") {
             alert("Por favor preencha corretamente o campo A, caso você queira descobrir o valor de A preencha a caixa com um 'x'");
             document.getElementById("inAmB").focus();
         }
