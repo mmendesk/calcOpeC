@@ -44,16 +44,7 @@ function calculadora() {
             var current = document.getElementById("inAmB");
             current.value = Res
         }
-
-
-
-
-
-
     }
-
-
-
 }
 
 

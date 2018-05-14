@@ -4,29 +4,29 @@ body  {
     font-size: 1.2em;
 }
 .caixaMestre {
-    width: 50%;
-    height: 80vh;
+    width: 80%;
+    height: 100vh;
     margin: auto;
-    background-color: rebeccapurple;
+    background-color: rgb(221, 221, 221);
 }
 .caixaCheckBox{
-    display: block;
-    float: right;
+    margin: auto;
     text-align: center;
-    background-color: palegreen;
+
 }
 .caixaInput {
     display: block;
     float: right;
-    width: 25%;
-    background-color: bisque;
+    width: 18%;
+    background-color:  rgb(207, 207, 207);;
     text-align:  right;
+    height: 100%;
+    padding-right: 2%;
 }
 
 .caixaEsquerda {
     display: block;
     float: left;
-    width: 60%;
+    width: 80%;
     height: 80vh;
-    background-color: peru;
 }
