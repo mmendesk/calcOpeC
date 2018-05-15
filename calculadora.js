@@ -42,9 +42,16 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
+
             Res = -(u) + (b + c) - (amb + amc + bmc) + todos;
+            Res = -(Res);
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
+
             var current = document.getElementById("inA");
-            current.value = -(Res);
+            current.value = Res;
         }
         else if (B == "x" || B == "X") {
             u = Number(U);
@@ -55,9 +62,15 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
+
             Res = -(u) + (a + c) - (amb + amc + bmc) + todos;
+            Res = -(Res);
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inB");
-            current.value = -(Res);
+            current.value = Res;
         }
         else if (C == "x" || C == "X") {
             u = Number(U);
@@ -69,8 +82,14 @@ function calculadora() {
             todos = Number(AmBmC);
 
             Res = -(u) + (a + b) - (amb + amc + bmc) + todos;
+            Res = -(Res);
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas");
+                Res = "";
+            }
+
             var current = document.getElementById("inC");
-            current.value = -(Res);
+            current.value = Res;
         }
         else if (AmB == "x" || AmB == "X") {
             u = Number(U);
@@ -82,6 +101,10 @@ function calculadora() {
             todos = Number(AmBmC);
 
             Res = -(u) + a + b + c - amc - bmc + todos;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inAmB");
             current.value = Res;
 
@@ -95,6 +118,10 @@ function calculadora() {
             todos = Number(AmBmC);
 
             Res = -(u) + a + b + c - amb - bmc + todos;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inAmC");
             current.value = Res;
         } else if (BmC == "x" || BmC == "X") {
@@ -107,6 +134,10 @@ function calculadora() {
             todos = Number(AmBmC);
 
             Res = -(u) + a + b + c - amc - amb + todos;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inBmC");
             current.value = Res;
         } else if (AmBmC == "x" || AmBmC == "X") {
@@ -118,7 +149,10 @@ function calculadora() {
             bmc = Number(BmC);
             amc = Number(AmC);
             Res = u - (a + b + c) + (amb + bmc + amc);
-
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inAmBmC");
             current.value = Res;
         }
@@ -131,6 +165,10 @@ function calculadora() {
             amc = Number(AmC);
             todos = Number(AmBmC);
             Res = a + b + c + todos - amb - bmc - amc;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inUniverso");
             current.value = Res;
         }
@@ -161,6 +199,10 @@ function calculadora() {
             b = Number(B);
             amb = Number(AmB);
             Res = a + b - amb;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inUniverso");
             current.value = Res;
         }
@@ -169,6 +211,10 @@ function calculadora() {
             b = Number(B);
             amb = Number(AmB);
             Res = u - b + amb;
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inA");
             current.value = Res
         }
@@ -177,6 +223,10 @@ function calculadora() {
             a = Number(A);
             amb = Number(AmB);
             Res = u - (a + amb);
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas")
+                Res = "";
+            }
             var current = document.getElementById("inB");
             current.value = Res
         }
@@ -185,6 +235,11 @@ function calculadora() {
             a = Number(A);
             b = Number(B);
             Res = u - (a + b);
+            Res = -(Res);
+            if (isNaN(Res)) {
+                alert("A calculadora encontrou algum problema, por favor verifique as entradas");
+                Res = "";
+            }
             var current = document.getElementById("inAmB");
             current.value = -(Res);
         }
@@ -220,3 +275,4 @@ function doalertB(checkboxElem) {
         alert("bye");
     }
 }
+
