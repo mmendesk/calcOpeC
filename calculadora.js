@@ -42,9 +42,9 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
-            Res = - (todos) + (b + c) - (amb + amc + bmc);
+            Res = -(u) + (b + c) - (amb + amc + bmc) + todos;
             var current = document.getElementById("inA");
-            current.value = Res;
+            current.value = -(Res);
         }
         else if (B == "x" || B == "X") {
             u = Number(U);
@@ -55,9 +55,9 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
-            Res = - (todos) + (a + c) - (amb + amc + bmc);
+            Res = -(u) + (a + c) - (amb + amc + bmc) + todos;
             var current = document.getElementById("inB");
-            current.value = Res;
+            current.value = -(Res);
         }
         else if (C == "x" || C == "X") {
             u = Number(U);
@@ -68,9 +68,9 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
-            Res = - (todos) + (a + b) - (amb + amc + bmc);
+            Res = -(u) + (a + b) - (amb + amc + bmc) + todos;
             var current = document.getElementById("inC");
-            current.value = Res;
+            current.value = -(Res);
         }
         else if (AmB == "x" || AmB == "X") {
             u = Number(U);
@@ -81,7 +81,7 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
-            Res = u - ((todos) + (a + b + c) + (amc + bmc));
+            Res = -(u) + a + b + c - amc - bmc + todos;
             var current = document.getElementById("inAmB");
             current.value = Res;
 
@@ -94,7 +94,7 @@ function calculadora() {
             bmc = Number(BmC);
             todos = Number(AmBmC);
 
-            Res = u - ((todos) + (a + b + c) + (amb + bmc));
+            Res = -(u) + a + b + c - amb - bmc + todos;
             var current = document.getElementById("inAmC");
             current.value = Res;
         } else if (BmC == "x" || BmC == "X") {
@@ -106,7 +106,7 @@ function calculadora() {
             amc = Number(AmC);
             todos = Number(AmBmC);
 
-            Res = u - ((todos) + (a + b + c) + (amb + amc));
+            Res = -(u) + a + b + c - amc - amb + todos;
             var current = document.getElementById("inBmC");
             current.value = Res;
         } else if (AmBmC == "x" || AmBmC == "X") {
@@ -117,13 +117,12 @@ function calculadora() {
             amb = Number(AmB);
             bmc = Number(BmC);
             amc = Number(AmC);
-            Res = u -( a + b + c + amb + bmc + amc);
+            Res = u - (a + b + c) + (amb + bmc + amc);
 
             var current = document.getElementById("inAmBmC");
             current.value = Res;
         }
         else if (U == "x" || U == "X") {
-
             a = Number(A);
             b = Number(B);
             c = Number(C);
@@ -131,7 +130,7 @@ function calculadora() {
             bmc = Number(BmC);
             amc = Number(AmC);
             todos = Number(AmBmC);
-            Res = a + b + c + amb + bmc + amc + todos;
+            Res = a + b + c + todos - amb - bmc - amc;
             var current = document.getElementById("inUniverso");
             current.value = Res;
         }
@@ -161,15 +160,15 @@ function calculadora() {
             a = Number(A);
             b = Number(B);
             amb = Number(AmB);
-            Res = a + b + amb;
+            Res = a + b - amb;
             var current = document.getElementById("inUniverso");
-            current.value = Res
+            current.value = Res;
         }
         else if (A == "x" || A == "X") {
             u = Number(U);
             b = Number(B);
             amb = Number(AmB);
-            Res = u - (b + amb);
+            Res = u - b + amb;
             var current = document.getElementById("inA");
             current.value = Res
         }
@@ -187,7 +186,7 @@ function calculadora() {
             b = Number(B);
             Res = u - (a + b);
             var current = document.getElementById("inAmB");
-            current.value = Res
+            current.value = -(Res);
         }
     }
 }
