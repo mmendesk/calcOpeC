@@ -16,45 +16,48 @@
             <img src="duo.png" alt="" id="img_d">
             <img src="trio.png" alt="" id="img_t" style="display: none;">
         </div>
-       
+
 
         <div class="caixaInput">
-                <div class="caixaCheckBox">
-
-
-                        <input type="radio" name="entrada" id="inDoisConj" onchange="doalertA(this)"> Dois Conjuntos
-                        <br>
-                        <input type="radio" name="entrada" id="inTresConj" onchange="doalertB(this)"> Três Conjuntos
-                    </div> <form action="">
-            <p>Universo:
-                <input type="text" name="" id="inUniverso" size="4">
-            </p>
-            <p>A:
-                <input type="text" name="" id="inA" size="4">
-            </p>
-            <p>B:
-                <input type="text" name="" id="inB" size="4">
-            </p>
-            <p id="op3" style="display: none;">C:
-                <input type="text" name="" id="inC" size="4">
-            </p>
-            <p>A ∩ B:
-                <input type="text" name="" id="inAmB" size="4">
-            </p>
-            <p id="op4" style="display: none;">A ∩ C:
-                <input type="text" name="" id="inAmC" size="4">
-            </p>
-            <p id="op5" style="display: none;">B ∩ C:
-                <input type="text" name="" id="inBmC" size="4">
-            </p>
-            <p id="op6" style="display: none;">A ∩ B ∩ C:
-                <input type="text" name="" id="inAmBmC" size="4">
-            </p>
-            <input type="reset" value="Limpar" id="btLimp"><input type="button" value="Calcular" id="btVer">
-<div class="caixaObs">
-            Marque com um "x" o conjunto ou intersecção que você deseja descobrir.</div>
-        </div></form>
-    </div>
+            <div class="caixaCheckBox">
+                <input type="radio" name="entrada" id="inDoisConj" onchange="doalertA(this)"> Dois Conjuntos
+                <br>
+                <input type="radio" name="entrada" id="inTresConj" onchange="doalertB(this)"> Três Conjuntos
+            </div>
+            <form action="">
+                <p>Universo:
+                    <input type="text" name="" id="inUniverso" size="4">
+                </p>
+                <p>A:
+                    <input type="text" name="" id="inA" size="4">
+                </p>
+                <p>B:
+                    <input type="text" name="" id="inB" size="4">
+                </p>
+                <p id="op3" style="display: none;">C:
+                    <input type="text" name="" id="inC" size="4">
+                </p>
+                <p>A ∩ B:
+                    <input type="text" name="" id="inAmB" size="4">
+                </p>
+                <p id="op4" style="display: none;">A ∩ C:
+                    <input type="text" name="" id="inAmC" size="4">
+                </p>
+                <p id="op5" style="display: none;">B ∩ C:
+                    <input type="text" name="" id="inBmC" size="4">
+                </p>
+                <p id="op6" style="display: none;">A ∩ B ∩ C:
+                    <input type="text" name="" id="inAmBmC" size="4">
+                </p>
+                <input type="reset" value="Limpar" id="btLimp">
+                <input type="button" value="Calcular" id="btVer">
+            </div>
+        </div>
+        
+                <div class="caixaObs radius10 sombra">
+                    Marque com um "x" o conjunto ou intersecção que você deseja descobrir.</div>
+                
+        </form>
     <script src="calculadora.js"></script>
     <div class="footer">
         Desenvolvido por: Maicom de Macedo Rodeghiero e Matheus Mendes

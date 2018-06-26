@@ -9,6 +9,7 @@ function calculadora() {
         var AmC = document.getElementById("inAmC").value;
         var BmC = document.getElementById("inBmC").value;
         var AmBmC = document.getElementById("inAmBmC").value;
+        var caixaResposta = document.getElementById("res");
 
         if (U == "" || U <= 0) {
             alert("Por favor preencha corretamente o campo Universo, caso você queira descobrir o valor de universo preencha a caixa com um 'x'");
@@ -50,6 +51,7 @@ function calculadora() {
                 Res = "";
             }
 
+            caixaResposta.textContent = "O resultado do conjunto A é: " + Res;
             var current = document.getElementById("inA");
             current.value = Res;
         }

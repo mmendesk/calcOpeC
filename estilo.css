@@ -5,7 +5,7 @@ body  {
 }
 .caixaMestre {
     width: 55%;
-    height: 95vh;
+    height: 88vh;
     margin: auto;
     background-color: rgb(221, 221, 221);
 }
@@ -21,7 +21,7 @@ body  {
     width: 25%;
     background-color:  rgb(207, 207, 207);;
     text-align:  right;
-    height: 90vh;
+    height: 83vh;
     padding-right: 2%;
 }
 
@@ -34,20 +34,34 @@ body  {
 }
 
 .footer{
-    height: 5vh;
+    height: 4.4vh;
     text-align: center;
     background-color: black;
     color: white;
 }
-
-.caixaObs {
-    background-color: rgb(140, 194, 140);
-    margin-left: 5%;
-    margin-top: 10%;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 5%;
-    color: white;
+.radius10 {
+        border-radius: 10px;
+        -moz-border-radiuz: 10px;
+        -webkit-border-radius: 10px;
+}
+.sombra{
+    box-shadow: 1px 1px 2px #333;
+    -moz-box-shadow: 1px 1px 2px #333;
+    -webkit-box-shadow: 1px 1px 2px #333;
+}
+.body {
+    margin: 0;
+}
+.caixaObs, .caixaRes {
+        background: #eff4d4 url("images/minilogo.png") no-repeat scroll 3px 3px;
+        border: 1px solid #8fad3d;
+        color: #596c26;
+        padding: 15px 15px 15px 78px;
+        min-height: 28px;
+        width: 50%;
+        margin: 4px 270px;
+        
+       
     
 }
 
@@ -75,15 +89,5 @@ body  {
     .caixaEsquerda {
         display: none;
 
-    }
-
-    .caixaObs {
-        background-color: rgb(140, 194, 140);
-        font-size: 0.8em;
-        text-align: center;
-        padding: 5%;
-        color: white;
-        width: 80%;
-        
     }
 }
